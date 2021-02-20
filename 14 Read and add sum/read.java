@@ -9,20 +9,13 @@ public class read
 		int sum=0;
 		int c=args.length;
 		System.out.println("Number of arguments is "+c);
-		try
+		for(int i=0;i<c;i++)
 		{
-			for(int i=0;i<c;i++)
-			{
-				System.out.println("Arguments "+ (i+1) +" is "+args[i]);
-				int x=Integer.parseInt(args[i]);
-				sum=sum+x;
-			}
+			System.out.println("Arguments "+ (i+1) +" is "+args[i]);
+			int x=Integer.parseInt(args[i]);
+			sum=sum+x;
 		}
-
-		catch(IOException e)
-		{
-			System.out.println(e);
-		}
+		System.out.println("Sum "+ sum);
 	}
 }
 

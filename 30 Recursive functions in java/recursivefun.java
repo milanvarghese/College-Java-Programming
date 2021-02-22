@@ -16,8 +16,18 @@ public class recursivefun
 {
 	public static void main(String args[])
 	{
-		recu r=new recu();
-		int s=r.fact(5); //argument pass
-		System.out.println(s);
+		try
+		{
+			DataInputStream dis = new DataInputStream(System.in);
+			System.out.println("Enter a number: ");
+			int x=Integer.parseInt(dis.readLine());
+			recu r=new recu();
+			int s=r.fact(x); //argument pass
+			System.out.println(s);
+		}
+		catch(IOException e)
+		{
+			System.out.println(e);
+		}
 	}
 }

@@ -21,8 +21,18 @@ public class cube
 {
 	public static void main(String args[])
 	{
-		Test t=new Test();
-		int s=t.cube(5); //argument pass
-		System.out.println(s);
+		try
+		{
+			DataInputStream dis = new DataInputStream(System.in);
+			System.out.println("Enter a number: ");
+			int x=Integer.parseInt(dis.readLine());
+			Test t=new Test();
+			int s=t.cube(x); //argument pass
+			System.out.println(s);
+		}
+		catch(IOException e)
+		{
+			System.out.println(e);
+		}
 	}
 }

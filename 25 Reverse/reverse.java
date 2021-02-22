@@ -1,36 +1,38 @@
-//Q. Write a program to find the square of a number using a function
-//passing  argument return
+//Q. Find the reverse of a number - YAYR
 
 import java.io.*;
 
-class Test
+class rev
 {
 	public int sqr(int n)
 	{
-		int s=n*n;
-		return(s);
+		int rev=0;
+		while(n>0){
+			rev=rev*10+n%10;
+			n=n/10;
+		}
+		return(rev);
 	}
 }
 
-public class square  //yes argument no return 
+public class reverse
 {
 	public static void main(String args[])
-	{
-
-				try
+	{	
+		try
 		{
 			DataInputStream dis = new DataInputStream(System.in);
 			System.out.println("Enter a number: ");
 			int x=Integer.parseInt(dis.readLine());
-			System.out.println("Square: "+x);
-			Test t=new Test();
-			int s=t.sqr(x); //argument pass
-			System.out.println(s);
+			rev r=new rev();
+			int re=r.sqr(x); //argument pass
+			System.out.println("Reverse of "+12345+" is "+re);
 		}
 		catch(IOException e)
 		{
 			System.out.println(e);
 		}
+
 		
 	}
 }

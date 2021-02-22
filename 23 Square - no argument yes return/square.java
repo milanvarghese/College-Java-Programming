@@ -7,9 +7,19 @@ class Test
 {
 	public int sqr()
 	{
-		int n=5;
-		int s=n*n;
-		return(s);
+		int n=0;
+		try
+		{
+			DataInputStream dis = new DataInputStream(System.in);
+			System.out.println("Enter a number: ");
+			n=Integer.parseInt(dis.readLine());
+			
+		}
+		catch(IOException e)
+		{
+			System.out.println(e);
+		}
+		return(n*n);
 	}
 }
 
